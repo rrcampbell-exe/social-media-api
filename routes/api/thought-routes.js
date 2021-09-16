@@ -15,11 +15,16 @@ router.route("/").get(getAllThought);
 // GET single thought at /api/thoughts/:thoughtId
 router.route("/:thoughtId").get(getThoughtById);
 
-// Set up all POST routes at /api/thoughts/:userId
-router.route("/:userId").post(addThought);
+// Set up all POST routes at /api/thoughts/
+router.route("/").post(addThought);
 
-router.route("/:userId/:thoughtId").put(addUserReaction).put(updateThought).delete(removeThought);
+// update or delete a thought
+router.route("/:thoughtId").put(updateThought).delete(removeThought);
 
-router.route("/:userId/:thoughtId/:userReactionId").delete(removeUserReaction);
+// add user reaction
+router.route("/:thoughtId/reactions/").post(addUserReaction);
+
+// delete user reaction
+router.route("/:thoughtId/reactions/:userReactionId").delete(removeUserReaction);
 
 module.exports = router;
