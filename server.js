@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // invoke routes directory to interface with API
-app.use(require('./routes'));
+app.use(require('./routes/api'));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-media-api', {
   useNewUrlParser: true,
