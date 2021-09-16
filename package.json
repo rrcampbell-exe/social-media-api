@@ -1,0 +1,24 @@
+{
+  "name": "social-media-api",
+  "version": "1.0.0",
+  "description": "An API for a social media app using NoSQL, Mongoose, and Express as its back-end technologies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrcampbell-exe/social-media-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrcampbell-exe/social-media-api/issues"
+  },
+  "homepage": "https://github.com/rrcampbell-exe/social-media-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.6"
+  }
+}
