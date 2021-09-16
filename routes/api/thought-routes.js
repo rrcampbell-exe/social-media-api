@@ -3,6 +3,7 @@ const {
   getAllThought,
   getThoughtById,
   addThought,
+  updateThought,
   removeThought,
   addUserReaction,
   removeUserReaction,
@@ -17,7 +18,7 @@ router.route("/:thoughtId").get(getThoughtById);
 // Set up all POST routes at /api/thoughts/:userId
 router.route("/:userId").post(addThought);
 
-router.route("/:userId/:thoughtId").put(addUserReaction).delete(removeThought);
+router.route("/:userId/:thoughtId").put(addUserReaction).put(updateThought).delete(removeThought);
 
 router.route("/:userId/:thoughtId/:userReactionId").delete(removeUserReaction);
 
