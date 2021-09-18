@@ -44,9 +44,10 @@ const thoughtController = {
     console.log(body);
     Thought.create(body)
       .then(({ _id }) => {
+        console.log(`id:`, _id)
         return User.findOneAndUpdate(
-          { _id: params.userId },
-          { $push: { thoughts: _id } },
+          { _id: params.id },
+          { $push: { thoughts: thoughtText } },
           { new: true }
         );
       })
@@ -111,14 +112,14 @@ const thoughtController = {
           return res.status(404).json({ message: "No thought with this id!" });
         }
         return User.findOneAndUpdate(
-          { _id: params.userId },
+          { _id: params.id },
           { $pull: { thoughts: params.thoughtId } },
           { new: true }
         );
       })
       .then((dbUserData) => {
         if (!dbUserData) {
-          res.status(404).json({ message: "No user found with this id!" });
+          res.status(404).json({ message: "No thought found with this id!" });
           return;
         }
         res.json(dbUserData);
