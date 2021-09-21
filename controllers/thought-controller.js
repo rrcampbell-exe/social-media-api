@@ -46,7 +46,7 @@ const thoughtController = {
         console.log(`dbThoughtData:`, dbThoughtData)
         return User.findOneAndUpdate(
           { username: dbThoughtData.username },
-          { $push: { thoughts: dbThoughtData.thoughtText } },
+          { $push: { thoughts: dbThoughtData._id } },
           { new: true }
         );
       })
