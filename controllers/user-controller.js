@@ -112,7 +112,10 @@ const userController = {
 
   // remove friend
   removeFriend({ params }, res) {
-    User.findOneAndRemove({ _id: params.userId })
+    User.findOneAndUpdate(      
+      { _id: params.sourceId },
+      { $pull: { friends: params.targetId } },
+      { new: true })
       .then((removedFriend) => {
         if (!removedFriend) {
           return res
@@ -120,8 +123,8 @@ const userController = {
             .json({ message: "User has no friend with this id!" });
         }
         return User.findOneAndUpdate(
-          { _id: params.userId },
-          { $pull: { friends: params.userId } },
+          { _id: params.targetId },
+          { $pull: { friends: params.sourceId } },
           { new: true }
         );
       })
