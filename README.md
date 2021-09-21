@@ -6,21 +6,22 @@
 This is an API for a social media app that uses NoSQL, Mongoose, and Express as its back-end technologies.
 
 ## Table of Contents
+- [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 - [Features](#features)
 - [Questions, Comments, Suggestions](#questions-comments-suggestions)
 
+## Installation
+To interface with this application on your local device, clone the repository and, once you have navigated to the root of the project directory in your IDE, run `npm install` to install the relevant dependencies.
 
 ## Usage
-Using this application requires the installation of Insomnia or other equivalent software. For a full walkthrough of how to use this application, [please visit the walkthrough video](https://youtu.be/3XFiqvKM_Ck).
+Using this application requires the installation of Insomnia or other equivalent software. For a full walkthrough of how to use this application after having downloaded one of said third-party applications, [please visit the walkthrough video](https://youtu.be/3XFiqvKM_Ck).
 
  ## Features
  - Express.js
  - Mongoose
-
-
 
 ## License
 This application is covered under the MIT license.
@@ -28,6 +29,10 @@ This application is covered under the MIT license.
 ## Credits
 ### Developed By
 - [Ryan R. Campbell](https://www.github.com/rrcampbell-exe/)
+
+### With Additional Credit To
+- `dateFormat` helper functionality based on equivalent functionality found in 2U module 18, "NoSQL"
+- Music featured in walkthrough video via [Streambeats by Harris Heller.](https://www.youtube.com/channel/UCQ6hCusHlsIDXqoTbbTHSUQ) Used under DMCA-free license as provided by creator.
 
 ## Questions, Comments, Suggestions
 Please email [Ryan R. Campbell](mailto:campbell.ryan.r@gmail.com) with any questions, to report any bugs, or to make any feature suggestions. You can also [contact Ryan R. Campbell on GitHub](https://www.github.com/rrcampbell-exe/).
